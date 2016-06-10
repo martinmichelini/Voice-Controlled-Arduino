@@ -52,6 +52,8 @@ typedef NSUInteger SKSState;
     self.btnLight.backgroundColor = [UIColor lightGrayColor];
     
     [self setUpSpeechRecognition];
+    
+    self.lblRSSI.text = @"RSSI: ---";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -224,14 +226,14 @@ NSTimer *rssiTimer;
     [self.btnConnect setTitle:@"Connect" forState:UIControlStateNormal];
     [self.indConnecting stopAnimating];
     
-    self.lblRSSI.text = @"---";
+    self.lblRSSI.text = @"RSSI: ---";
     
     [rssiTimer invalidate];
 }
 
 // When RSSI is changed, this will be called
 -(void) bleDidUpdateRSSI:(NSNumber *) rssi {
-    self.lblRSSI.text = rssi.stringValue;
+    self.lblRSSI.text = [NSString stringWithFormat:@"RSSI: %@", rssi.stringValue];
 }
 
 -(void) readRSSITimer:(NSTimer *)timer {
