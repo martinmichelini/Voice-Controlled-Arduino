@@ -28,18 +28,6 @@
                                     <action selector="btnScanForPeripherals:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dci-Hh-3aZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koY-FP-7jc">
-                                <rect key="frame" x="225" y="280" width="150" height="40"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="2WA-DT-6kK"/>
-                                    <constraint firstAttribute="width" constant="150" id="QKB-ys-eWI"/>
-                                </constraints>
-                                <state key="normal" title="Light"/>
-                                <connections>
-                                    <action selector="turnLightOn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8oP-R1-MBh"/>
-                                </connections>
-                            </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="QtJ-RY-qG8">
                                 <rect key="frame" x="282" y="477" width="37" height="37"/>
                                 <color key="color" red="0.9529411793" green="0.49803921579999999" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
@@ -54,18 +42,30 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koY-FP-7jc">
+                                <rect key="frame" x="225" y="357" width="150" height="40"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="TEZ-o9-TFb"/>
+                                    <constraint firstAttribute="height" constant="40" id="ZOt-tu-baD"/>
+                                </constraints>
+                                <state key="normal" title="Light"/>
+                                <connections>
+                                    <action selector="turnLightOn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8oP-R1-MBh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="o1U-CQ-Rq6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="35T-fs-Zv0"/>
-                            <constraint firstItem="koY-FP-7jc" firstAttribute="trailing" secondItem="IlP-lr-q45" secondAttribute="trailing" id="5qI-9a-z9o"/>
+                            <constraint firstItem="QtJ-RY-qG8" firstAttribute="top" secondItem="koY-FP-7jc" secondAttribute="bottom" constant="80" id="3au-jf-kCm"/>
                             <constraint firstItem="o1U-CQ-Rq6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BLz-nh-ccx"/>
+                            <constraint firstItem="koY-FP-7jc" firstAttribute="leading" secondItem="IlP-lr-q45" secondAttribute="leading" id="E5Z-7l-1Ui"/>
                             <constraint firstItem="QtJ-RY-qG8" firstAttribute="centerX" secondItem="IlP-lr-q45" secondAttribute="centerX" id="Iqr-PR-fbT"/>
-                            <constraint firstItem="koY-FP-7jc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LFb-oX-q3q"/>
                             <constraint firstItem="IlP-lr-q45" firstAttribute="top" secondItem="QtJ-RY-qG8" secondAttribute="bottom" constant="26" id="Q9V-QZ-11M"/>
                             <constraint firstAttribute="bottom" secondItem="IlP-lr-q45" secondAttribute="bottom" constant="20" symbolic="YES" id="R2Z-Rn-6li"/>
-                            <constraint firstItem="o1U-CQ-Rq6" firstAttribute="centerX" secondItem="koY-FP-7jc" secondAttribute="centerX" id="qu1-TU-6V3"/>
-                            <constraint firstItem="koY-FP-7jc" firstAttribute="leading" secondItem="IlP-lr-q45" secondAttribute="leading" id="rsN-eH-vvl"/>
+                            <constraint firstItem="koY-FP-7jc" firstAttribute="centerX" secondItem="o1U-CQ-Rq6" secondAttribute="centerX" id="fZJ-Ca-D8u"/>
+                            <constraint firstItem="koY-FP-7jc" firstAttribute="trailing" secondItem="IlP-lr-q45" secondAttribute="trailing" id="gcx-tD-5dc"/>
                         </constraints>
                     </view>
                     <connections>

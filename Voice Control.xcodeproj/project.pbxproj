@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01412AAB5D651A30CDBE4020 /* libPods-Voice Control.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6865990EAE6B1FC7B201AD /* libPods-Voice Control.a */; };
 		F72B4A071D0A719700C7FC6F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F72B4A061D0A719700C7FC6F /* main.m */; };
 		F72B4A0A1D0A719700C7FC6F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F72B4A091D0A719700C7FC6F /* AppDelegate.m */; };
 		F72B4A0D1D0A719700C7FC6F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F72B4A0C1D0A719700C7FC6F /* ViewController.m */; };
@@ -15,9 +16,15 @@
 		F72B4A151D0A719700C7FC6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72B4A131D0A719700C7FC6F /* LaunchScreen.storyboard */; };
 		F72B4A1F1D0A720800C7FC6F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72B4A1E1D0A720800C7FC6F /* CoreBluetooth.framework */; };
 		F72B4A251D0A729F00C7FC6F /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = F72B4A231D0A729F00C7FC6F /* BLE.m */; };
+		F7AB29561D0A8CBE00F79DE1 /* sk_error.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F782E6821D0A867200DD8604 /* sk_error.pcm */; };
+		F7AB29571D0A8CBE00F79DE1 /* sk_start.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F782E6831D0A867200DD8604 /* sk_start.pcm */; };
+		F7AB29581D0A8CBE00F79DE1 /* sk_stop.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F782E6841D0A867200DD8604 /* sk_stop.pcm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		061FA9937B7829B061805481 /* Pods-Voice Control.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Voice Control.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Voice Control/Pods-Voice Control.debug.xcconfig"; sourceTree = "<group>"; };
+		1D6865990EAE6B1FC7B201AD /* libPods-Voice Control.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Voice Control.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99983C98461EAC6DF797C891 /* Pods-Voice Control.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Voice Control.release.xcconfig"; path = "Pods/Target Support Files/Pods-Voice Control/Pods-Voice Control.release.xcconfig"; sourceTree = "<group>"; };
 		F72B4A021D0A719700C7FC6F /* Voice Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Voice Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F72B4A061D0A719700C7FC6F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F72B4A081D0A719700C7FC6F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -32,6 +39,9 @@
 		F72B4A221D0A729F00C7FC6F /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLE.h; sourceTree = "<group>"; };
 		F72B4A231D0A729F00C7FC6F /* BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLE.m; sourceTree = "<group>"; };
 		F72B4A241D0A729F00C7FC6F /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDefines.h; sourceTree = "<group>"; };
+		F782E6821D0A867200DD8604 /* sk_error.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = sk_error.pcm; sourceTree = "<group>"; };
+		F782E6831D0A867200DD8604 /* sk_start.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = sk_start.pcm; sourceTree = "<group>"; };
+		F782E6841D0A867200DD8604 /* sk_stop.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = sk_stop.pcm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,17 +50,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				F72B4A1F1D0A720800C7FC6F /* CoreBluetooth.framework in Frameworks */,
+				01412AAB5D651A30CDBE4020 /* libPods-Voice Control.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EEFB0E596F5D45F8779C2FC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D6865990EAE6B1FC7B201AD /* libPods-Voice Control.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0F7DAE18B37B2D4619FA4B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				061FA9937B7829B061805481 /* Pods-Voice Control.debug.xcconfig */,
+				99983C98461EAC6DF797C891 /* Pods-Voice Control.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F72B49F91D0A719700C7FC6F = {
 			isa = PBXGroup;
 			children = (
 				F72B4A041D0A719700C7FC6F /* Voice Control */,
 				F72B4A031D0A719700C7FC6F /* Products */,
+				F0F7DAE18B37B2D4619FA4B0 /* Pods */,
+				EEFB0E596F5D45F8779C2FC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +103,7 @@
 				F72B4A111D0A719700C7FC6F /* Assets.xcassets */,
 				F72B4A131D0A719700C7FC6F /* LaunchScreen.storyboard */,
 				F72B4A161D0A719700C7FC6F /* Info.plist */,
+				F7AB29551D0A8B4C00F79DE1 /* Resources */,
 				F72B4A051D0A719700C7FC6F /* Supporting Files */,
 				F72B4A271D0A72B700C7FC6F /* Frameworks */,
 			);
@@ -107,6 +138,17 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		F7AB29551D0A8B4C00F79DE1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F782E6821D0A867200DD8604 /* sk_error.pcm */,
+				F782E6831D0A867200DD8604 /* sk_start.pcm */,
+				F782E6841D0A867200DD8604 /* sk_stop.pcm */,
+			);
+			name = Resources;
+			path = ..;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,9 +156,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F72B4A191D0A719700C7FC6F /* Build configuration list for PBXNativeTarget "Voice Control" */;
 			buildPhases = (
+				628FA95759066CF90CD2EE6B /* Check Pods Manifest.lock */,
 				F72B49FE1D0A719700C7FC6F /* Sources */,
 				F72B49FF1D0A719700C7FC6F /* Frameworks */,
 				F72B4A001D0A719700C7FC6F /* Resources */,
+				64C1B5A81A64A74F80A1CD14 /* Embed Pods Frameworks */,
+				4AA860228A1D850EAB3B0DBF /* Copy Pods Resources */,
+				F7AB29591D0A8F2C00F79DE1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -138,6 +184,7 @@
 				TargetAttributes = {
 					F72B4A011D0A719700C7FC6F = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5TH34FLG27;
 					};
 				};
 			};
@@ -164,6 +211,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7AB29561D0A8CBE00F79DE1 /* sk_error.pcm in Resources */,
+				F7AB29571D0A8CBE00F79DE1 /* sk_start.pcm in Resources */,
+				F7AB29581D0A8CBE00F79DE1 /* sk_stop.pcm in Resources */,
 				F72B4A151D0A719700C7FC6F /* LaunchScreen.storyboard in Resources */,
 				F72B4A121D0A719700C7FC6F /* Assets.xcassets in Resources */,
 				F72B4A101D0A719700C7FC6F /* Main.storyboard in Resources */,
@@ -171,6 +221,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4AA860228A1D850EAB3B0DBF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Voice Control/Pods-Voice Control-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		628FA95759066CF90CD2EE6B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		64C1B5A81A64A74F80A1CD14 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Voice Control/Pods-Voice Control-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7AB29591D0A8F2C00F79DE1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 241da42dd0e4a0e463aae9024fbd7f8a19941e5b 4501a44b8a4508d0b7bafdd6dfc94828e65c8c37289523d42766a7eb3fc06e06";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F72B49FE1D0A719700C7FC6F /* Sources */ = {
@@ -226,7 +337,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -290,8 +401,11 @@
 		};
 		F72B4A1A1D0A719700C7FC6F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 061FA9937B7829B061805481 /* Pods-Voice Control.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Voice Control/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -302,8 +416,11 @@
 		};
 		F72B4A1B1D0A719700C7FC6F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99983C98461EAC6DF797C891 /* Pods-Voice Control.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Voice Control/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -331,6 +448,7 @@
 				F72B4A1B1D0A719700C7FC6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
