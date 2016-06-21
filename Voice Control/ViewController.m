@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "BLE.h"
 #import <SpeechKit/SpeechKit.h>
+#import <TSMessage.h>
 
 // State Logic: IDLE -> LISTENING -> PROCESSING -> repeat
 enum {
@@ -324,6 +325,10 @@ NSTimer *rssiTimer;
 }
 
 - (IBAction)turnLightOn:(UIButton *)sender {
+    [TSMessage showNotificationWithTitle:@"No Internet Connection"
+                                subtitle:@"Please make sure your device is connected to the internet"
+                                    type:TSMessageNotificationTypeWarning];
+    
     self.lightSwitch =! self.lightSwitch;
     
     if (self.lightSwitch) {
