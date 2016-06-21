@@ -134,15 +134,17 @@ typedef NSUInteger SKSState;
 - (void)transaction:(SKTransaction *)transaction didReceiveRecognition:(SKRecognition *)recognition
 {
     NSLog(@"didReceiveRecognition: %@", recognition.text);
-    NSString *command = [recognition.text lowercaseString];
     
-    NSLog(@"Command: %@", command);
-    
-    if ([command containsString:@"light on"]) {
-        [self lightOn];
-    } else if ([command containsString:@"light off"]) {
-        [self lighfOff];
-    }
+    [self writeTextToDisplay:recognition.text];
+//    NSString *command = [recognition.text lowercaseString];
+//
+//    NSLog(@"Command: %@", command);
+//    
+//    if ([command containsString:@"light on"]) {
+//        [self lightOn];
+//    } else if ([command containsString:@"light off"]) {
+//        [self lighfOff];
+//    }
     
     _state = SKSIdle;
 }
@@ -351,6 +353,32 @@ NSTimer *rssiTimer;
     
     NSData *data = [[NSData alloc] initWithBytes:buf length:3];
     [ble write:data];
+}
+
+- (IBAction)fan:(UIButton *)sender {
+    UInt8 buf[3] = {0x03, 0x00, 0x00};
+    
+    buf[1] = 0x00;
+    
+    NSData *data = [[NSData alloc] initWithBytes:buf length:3];
+    [ble write:data];
+}
+
+- (void)writeTextToDisplay:(NSString *)string {
+    NSString *text = string;
+    NSString *s;
+    NSData *d;
+    
+    if (text.length > 16)
+        s = [text substringToIndex:16];
+    else
+        s = text;
+    
+    d = [s dataUsingEncoding:NSUTF8StringEncoding];
+    
+    if (ble.activePeripheral.state == CBPeripheralStateConnected) {
+        [ble write:d];
+    }
 }
 
 @end
